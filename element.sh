@@ -67,6 +67,7 @@ else  # retrieve the element's info, properties and type from db
 
     # output the respective information about the specific element
     echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MELTING_POINT celsius and a boiling point of $BOILING_POINT celsius."
-  
+
   fi
+
 fi
