@@ -77,7 +77,7 @@ ALTER TABLE public.properties OWNER TO freecodecamp;
 
 CREATE TABLE public.types (
     type_id integer NOT NULL,
-    type character varying(30) NOT NULL
+    type character varying(10) NOT NULL
 );
 
 
@@ -133,6 +133,14 @@ ALTER TABLE ONLY public.elements
 
 
 --
+-- Name: elements elements_name_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.elements
+    ADD CONSTRAINT elements_name_key UNIQUE (name);
+
+
+--
 -- Name: elements elements_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
@@ -141,11 +149,11 @@ ALTER TABLE ONLY public.elements
 
 
 --
--- Name: elements elements_symbol_name_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: elements elements_symbol_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.elements
-    ADD CONSTRAINT elements_symbol_name_key UNIQUE (symbol, name);
+    ADD CONSTRAINT elements_symbol_key UNIQUE (symbol);
 
 
 --
